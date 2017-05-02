@@ -1,0 +1,49 @@
+<div class="wrapper">
+    <h3>
+        To-Do List
+    </h3>
+    <div class="pull-right" *ngIf="!showAddTaskForm">
+        <button class="btn btn-primary" (click)="showAddTaskForm = !showAddTaskForm">Add New Task</button>
+    </div>
+    
+    <!-- Add Task List -->
+    <div class="form clearfix" *ngIf="showAddTaskForm">
+        <form>
+            <div class="row">
+            <div class="col-md-1 checkbox">
+                <label>
+                    <input type="checkbox" name="task.completed" [(ngModel)]="task.completed" />
+                </label>
+            </div>
+            <div class="col-md-9">
+                <input type="text" class="form-control" [(ngModel)]="task.name" name="task.name" />
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" (click)="addTask()">Save</button>
+                <button class="btn btn-primary" (click)="showAddTaskForm = !showAddTaskForm">Close</button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <!--Show Task List -->
+    <div class="taskList clearfix"  *ngIf="tasks.length > 0">
+        <div class="row" *ngFor="let task of tasks">           
+            <div class="col-md-1 checkbox">               
+                <label>
+                    <input type="checkbox" [(ngModel)]="task.completed" (click)="completeTask(task)">
+                </label>
+            </div>
+            <div class="col-md-9" [ngClass]="{'completed' : task.completed}">
+                <p>{{task.name}}</p>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-danger" (click)="editTask(task)">Edit</button>
+                <button class="btn btn-danger" (click)="removeTask(task._id)">Remove</button>
+            </div>
+        </div>
+    </div>
+     <div class="noTask" *ngIf="tasks.length == 0">
+        <p> Please add some Tasks to get started</p>
+    </div>
+</div>

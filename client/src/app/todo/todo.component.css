@@ -1,0 +1,14 @@
+.checkbox{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.row{
+    margin: 10px 0;
+}
+.clearfix{
+    clear: both;
+}
+.completed{
+    text-decoration: line-through;
+    color: rgb(207,4,4);
+}
