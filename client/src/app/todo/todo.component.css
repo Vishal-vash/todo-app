@@ -1,14 +1,72 @@
-.checkbox{
-    margin-top: 0;
-    margin-bottom: 0;
+.todoWrapper{
+    width: 70%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #e7f3fe;
+    position: relative;
+    overflow: scroll;
 }
-.row{
-    margin: 10px 0;
+
+.tasks-wrapper .row{
+    cursor: pointer;
+    padding: 10px 20px;
 }
-.clearfix{
-    clear: both;
+
+.tasks-wrapper .row:hover{
+    border-right: 4px solid #286090;
+    border-left: 4px solid #286090;
+    color: #286090;
 }
-.completed{
-    text-decoration: line-through;
-    color: rgb(207,4,4);
+
+.add-task-wrapper.row{
+    margin-top: 70px;
+    padding: 0 20px 10px;
+}
+
+.addTaskRow.row{
+    margin-bottom: 20px;
+}
+
+.marginR10{
+    margin-right: 10px;
+}
+
+h3 {
+    background: #286090;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -20px;
+}
+
+.img{
+    width: 22px;
+    position: absolute;
+    left: 15px;
+}
+
+.task-name{
+    position: relative;
+    font-size: 18px;
+    font-style: italic;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.form-control{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 18px;
+    font-style: italic;
+}
+
+p{
+    font-size: 20px;
+    font-style: italic;
 }
