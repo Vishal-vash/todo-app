@@ -1,21 +1,22 @@
 {
   "name": "todo-app",
   "version": "1.0.0",
-  "description": "Simple TODO App - MEAN Application using Angular 2",
+  "description": "Simple MEAN App for todo list",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "TODO",
-    "App"
+    "todo",
+    "MEAN",
+    "Angular",
+    "2"
   ],
   "author": "Vishal Vasishat",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "mongoose": "^4.9.4"
+    "mongoose": "^4.9.5"
   }
 }
